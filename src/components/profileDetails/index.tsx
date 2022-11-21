@@ -1,8 +1,14 @@
 import { useUsers } from "../../context"
 import { RiFacebookFill, BsInstagram, BsTwitter } from "react-icons/all";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export function ProfileDetails() {
+
+  const { name } = useParams(); 
+  const nameSplitedParamURL = name?.split('.')
+  console.log(nameSplitedParamURL);
+  
+  
   return (
     <>
       <h1 className="text-center text-3xl mb-20">Sou um desenvolvedor React criativo</h1>
