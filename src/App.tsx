@@ -4,8 +4,8 @@ import { AppRoutes } from "./routes";
 export function App() {
   return (
     <>
-    <Header />
-    <AppRoutes />
+      <Header />
+      <AppRoutes />
     </>
   );
 }

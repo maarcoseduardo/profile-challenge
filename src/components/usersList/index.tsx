@@ -1,36 +1,10 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
 import { Link } from "react-router-dom";
-
-interface IUser {
-  name: {
-    first: string;
-    last: string;
-  };
-  picture: {
-    thumbnail: string;
-  };
-  phone: string;
-  email: string;
-  location: {
-    city: string;
-    country: string;
-  };
-}
+import { useUsers } from "../../context";
 
 export function UsersList() {
-  const [data, setData] = useState<IUser[]>([]);
 
-  async function getUsers() {
-    const response = await api.get("/?results=100");
-    const responseData = await response.data.results;
-    setData(responseData);
-  }
-
-  useEffect(() => {
-    getUsers();
-  }, []);
-
+  const { usersList } = useUsers();
+  
   return (
     <>
       <div className="my-4">
@@ -60,7 +34,7 @@ export function UsersList() {
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
-          {data.map((users) => (
+          {usersList.map((users) => (
             <tr key={users.email}>
               <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                 <Link to={`/profile/${users.name.first}.${users.name.last}`}>
@@ -89,7 +63,7 @@ export function UsersList() {
         </tbody>
       </table>
 
-      {data.map((users) => (
+      {usersList.map((users) => (
         <div className="grid grid-cols-1 gap-4 md:hidden">
           <div className="bg-gray-600 my-2 p-4 rounded-lg shadow">
             <div className="flex flex-wrap items-center space-x-2 text-sm">
