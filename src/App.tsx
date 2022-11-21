@@ -1,11 +1,11 @@
 import { Header } from "./components/header";
-import { UsersList } from "./components/usersList";
+import { AppRoutes } from "./routes";
 
 export function App() {
   return (
     <>
-      <Header />
-      <UsersList />
+    <Header />
+    <AppRoutes />
     </>
   );
 }
