@@ -1,4 +1,3 @@
-import { Header } from "../components/header";
 import { ProfileDetails } from "../components/profileDetails";
 
 export function Profile() {
