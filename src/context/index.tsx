@@ -64,6 +64,8 @@ export function UserListProvider({ children }: UserListProviderProps) {
     getUsers();
   }, []);
 
+  
+
   return (
     <UsersContext.Provider
       value={{
