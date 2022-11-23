@@ -18,7 +18,8 @@ interface IUser {
   }
   dob?: {
     age: number;
-  },
+  }
+  gender: string;
   location: {
     street?: {
       name: string;
@@ -63,8 +64,6 @@ export function UserListProvider({ children }: UserListProviderProps) {
   useEffect(() => {
     getUsers();
   }, []);
-
-  
 
   return (
     <UsersContext.Provider

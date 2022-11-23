@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useUsers } from "../../context";
-import { Pagination } from "../pagination/Pagination";
+import { Pagination } from "../pagination";
 
 export function UsersList() {
 
@@ -114,7 +114,11 @@ export function UsersList() {
             </div>
           </div>
         ))}
-        <Pagination setCurrentPage={setCurrentPage} pages={pages} currentPage={currentPage}/>
+        <Pagination
+          setCurrentPage={setCurrentPage}
+          pages={pages}
+          currentPage={currentPage}
+        />
       </div>
     </>
   );
