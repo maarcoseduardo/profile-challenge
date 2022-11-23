@@ -1,6 +1,17 @@
 import { useUsers } from "../../context"
-import { RiFacebookFill, BsInstagram, BsTwitter } from "react-icons/all";
-import { Link, useParams } from "react-router-dom";
+import {
+  RiFacebookFill,
+  BsInstagram,
+  BsTwitter,
+  MdVerified,
+  AiOutlineUser,
+  IoMdMale,
+  IoMdFemale,
+  AiOutlineNumber,
+  MdOutlineEmail,
+  IoMdPhonePortrait
+} from "react-icons/all";
+import { useParams } from "react-router-dom";
 
 export function ProfileDetails() {
   const { usersList } = useUsers();
@@ -8,44 +19,104 @@ export function ProfileDetails() {
 
   return (
     <>
-      {usersList.map((userProfile) => (
-        userProfile.name.first + userProfile.name.last == name ? (
-          <>
-            <h1 className="text-center text-3xl mb-20">Sou um desenvolvedor React criativo</h1>
-            <div 
-            className="flex justify-between"
-            key={userProfile.login?.uuid}
-            >
-              <img
-                src={userProfile.picture.large}
-                className="max-w-[250px] w-full h-[350px] rounded-md"
-              />
-              <div className="flex flex-col gap-6 max-w-sm w-full h-[200px]">
-                <h2 className="text-2xl">About me</h2>
-                <p className="max-w-[300px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error ex sunt similique ratione nemo. Quod aut recusandae quasi itaque voluptas iusto! Corrupti ea repellendus temporibus neque quas natus eligendi. </p>
-                <p className="text-gray-400">Imagem por
-                  <Link to="" className="ml-1 hover:underline underline-offset-4">{userProfile.login?.username}</Link>
-                </p>
+      {usersList.map((userProfile) => (userProfile.name.first + userProfile.name.last == name ? (
+        <>
+          <section className="max-w-[300px] w-full rounded-lg shadow">
+            <div>
+              <img className="max-w-[300px] mx-auto p-4 w-full rounded-full"
+                src={userProfile.picture.large} alt={userProfile.picture.large} />
+            </div>
+            <div className="w-full flex flex-col items-center gap-2 mt-4">
+              <h1 className="font-bold">Simret aklilu</h1>
+              <div className="flex items-center gap-2">
+                <span className="text-green-600">Verified</span>
+                <span>
+                  <MdVerified color="green" />
+                </span>
               </div>
-              <div className="max-w-[280px] w-full flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                  <h2 className="text-2xl">Details</h2>
-                  <strong>Name:</strong>
-                  <p> {userProfile.name.first} {userProfile.name.last}</p>
-                  <strong>Idade:</strong>
-                  <p>{userProfile.dob?.age}</p>
-                  <strong>Local:</strong>
-                  <p>{userProfile.location.city}, {userProfile.location.country}, {userProfile.location.street?.name}</p>
-                </div>
-                <div className="flex justify-between max-w-[80px]">
-                  <RiFacebookFill />
-                  <BsTwitter />
+              <div className="flex justify-around my-4 gap-4">
+                <span>
                   <BsInstagram />
-                </div>
+                </span>
+                <span>
+                  <BsTwitter />
+                </span>
+                <span>
+                  <RiFacebookFill />
+                </span>
               </div>
             </div>
-          </>
-        ) : ("")
+          </section>
+          <section className="max-w-xl w-full rounded-lg shadow">
+            <div className="bg-gray-200 h-10 p-2">
+              <h2 className="font-bold">About me</h2>
+            </div>
+            <div className="flex flex-col gap-20 h-96 p-2">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <AiOutlineUser />
+                  <span>{userProfile.login?.username}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  {userProfile.gender === "male" ?
+                    (< IoMdMale />)
+                    :
+                    (<IoMdFemale />)}
+                  <span>{userProfile.gender}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AiOutlineNumber />
+                  <span>{userProfile.dob?.age} Years old</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MdOutlineEmail />
+                  <span>{userProfile.email}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <IoMdPhonePortrait />
+                  <span>{userProfile.phone}</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-bold">Description</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Aliquam ipsam veritatis dolore facere mollitia molestiae
+                  deleniti suscipit qui corporis quaerat! Rem saepe quam, praesentium et ratione aliquid.
+                  Excepturi, cupiditate corrupti.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section className="max-w-[200px] w-full rounded-lg shadow address">
+            <div className="bg-gray-200 h-10 p-2">
+              <h2 className="font-bold">Address</h2>
+            </div>
+            <div className="flex flex-col gap-2 p-2">
+              <div>
+                <span className="font-bold">Pais:</span>
+                <span>{userProfile.location.country}</span>
+              </div>
+              <div>
+                <span className="font-bold">Estado:</span>
+                <span>{userProfile.location.state}</span>
+              </div>
+              <div>
+                <span className="font-bold">City:</span>
+                <span>{userProfile.location.city}</span>
+              </div>
+              <div>
+                <span className="font-bold">Rua:</span>
+                <span>{userProfile.location.street?.name}</span>
+              </div>
+              <div>
+                <span className="font-bold">Number:</span>
+                <span>{userProfile.location.street?.number}</span>
+              </div>
+            </div>
+          </section>
+        </>
+      ) : ("")
       ))}
     </>
   )

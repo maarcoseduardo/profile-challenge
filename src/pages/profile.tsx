@@ -4,7 +4,7 @@ export function Profile() {
 
   return (
     <>
-      <div className="max-w-5xl p-4 bg-black text-white mx-auto">
+      <div className="max-w-6xl p-4 mx-auto flex justify-between">
         <ProfileDetails />
       </div>
     </>
