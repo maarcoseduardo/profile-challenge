@@ -51,28 +51,28 @@ export function ProfileDetails() {
             <div className="bg-gray-200 h-10 p-2">
               <h2 className="font-bold">About me</h2>
             </div>
-            <div className="flex flex-col gap-20 h-96 p-2">
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
+            <div className="p-2 flex flex-col gap-10">
+              <div>
+                <div className="flex items-center gap-3 my-2">
                   <AiOutlineUser />
                   <span>{userProfile.login?.username}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3 my-2">
                   {userProfile.gender === "male" ?
                     (< IoMdMale />)
                     :
                     (<IoMdFemale />)}
                   <span>{userProfile.gender}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3 my-2">
                   <AiOutlineNumber />
                   <span>{userProfile.dob?.age} Years old</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3 my-2">
                   <MdOutlineEmail />
                   <span>{userProfile.email}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3 my-2">
                   <IoMdPhonePortrait />
                   <span>{userProfile.phone}</span>
                 </div>
@@ -92,24 +92,24 @@ export function ProfileDetails() {
             <div className="bg-gray-200 h-10 p-2">
               <h2 className="font-bold">Address</h2>
             </div>
-            <div className="flex flex-col gap-2 p-2">
-              <div>
-                <span className="font-bold">Pais:</span>
+            <div className="flex flex-col gap-2 py-4 px-2 ">
+              <div className="flex items-center gap-3">
+                <span className="font-bold">Country:</span>
                 <span>{userProfile.location.country}</span>
               </div>
-              <div>
-                <span className="font-bold">Estado:</span>
+              <div className="flex items-center gap-3">
+                <span className="font-bold">State:</span>
                 <span>{userProfile.location.state}</span>
               </div>
-              <div>
+              <div className="flex items-center gap-3">
                 <span className="font-bold">City:</span>
                 <span>{userProfile.location.city}</span>
               </div>
-              <div>
-                <span className="font-bold">Rua:</span>
+              <div className="flex items-center gap-3">
+                <span className="font-bold">Street:</span>
                 <span>{userProfile.location.street?.name}</span>
               </div>
-              <div>
+              <div className="flex items-center gap-3">
                 <span className="font-bold">Number:</span>
                 <span>{userProfile.location.street?.number}</span>
               </div>
