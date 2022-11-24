@@ -88,7 +88,7 @@ export function ProfileDetails() {
               </div>
             </div>
           </section>
-          <section className="max-w-[200px] w-full rounded-lg shadow address">
+          <section className="max-w-[230px] w-full rounded-lg shadow address">
             <div className="bg-gray-200 h-10 p-2">
               <h2 className="font-bold">Address</h2>
             </div>
@@ -105,7 +105,7 @@ export function ProfileDetails() {
                 <span className="font-bold">City:</span>
                 <span>{userProfile.location.city}</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center flex-wrap gap-3">
                 <span className="font-bold">Street:</span>
                 <span>{userProfile.location.street?.name}</span>
               </div>
