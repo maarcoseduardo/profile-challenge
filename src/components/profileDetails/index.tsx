@@ -16,11 +16,15 @@ import { useParams } from "react-router-dom";
 export function ProfileDetails() {
   const { usersList } = useUsers();
   const { name } = useParams();
+  const filteredUser = usersList.filter((userProfile) => (userProfile.name.first + userProfile.name.last === name))
 
   return (
     <>
-      {usersList.map((userProfile) => (userProfile.name.first + userProfile.name.last == name ? (
-        <>
+      {filteredUser.map((userProfile) => (
+        <div
+          key={userProfile.login?.uuid}
+          className="max-w-6xl p-4 flex flex-col mx-auto xl:flex-row justify-between gap-10"
+        >
           <section className="max-w-[300px] w-full rounded-lg shadow">
             <div>
               <img className="max-w-[300px] mx-auto p-4 w-full rounded-full"
@@ -115,8 +119,7 @@ export function ProfileDetails() {
               </div>
             </div>
           </section>
-        </>
-      ) : ("")
+        </div>
       ))}
     </>
   )
