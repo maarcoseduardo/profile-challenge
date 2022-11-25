@@ -1,7 +1,17 @@
-import { BsInstagram, BsTwitter, MdVerified, RiFacebookFill } from "react-icons/all";
+import {
+  BsInstagram,
+  BsTwitter,
+  MdVerified,
+  RiFacebookFill
+} from "react-icons/all";
+import { Link } from "react-router-dom";
 import { ProfileDetailsProps } from "../../utils/types";
 
-export function ProfileDetails({ profilePicture, profileName, profileLastName }: ProfileDetailsProps) {
+export function ProfileDetails({
+  profilePicture,
+  profileName,
+  profileLastName
+}: ProfileDetailsProps) {
   return (
     <section className="max-w-[300px] w-full rounded-lg shadow">
       <div>
@@ -17,15 +27,15 @@ export function ProfileDetails({ profilePicture, profileName, profileLastName }:
           </span>
         </div>
         <div className="flex justify-around my-4 gap-4">
-          <span>
-            <BsInstagram />
-          </span>
-          <span>
-            <BsTwitter />
-          </span>
-          <span>
-            <RiFacebookFill />
-          </span>
+          <Link to="/" className="flex justify-center items-center h-8 w-8 bg-slate-300 rounded-full">
+            <BsInstagram color="#F20066" />
+          </Link>
+          <Link to="/" className="flex justify-center items-center h-8 w-8 bg-slate-300 rounded-full">
+            <BsTwitter color="#00A2E4" />
+          </Link>
+          <Link to="/" className="flex justify-center items-center h-8 w-8 bg-slate-300 rounded-full">
+            <RiFacebookFill color="#1771E6" />
+          </Link>
         </div>
       </div>
     </section>

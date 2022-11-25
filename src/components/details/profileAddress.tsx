@@ -1,6 +1,12 @@
 import { ProfileAddressProps } from "../../utils/types";
 
-export function ProfileAddress({ profileCountry, profileState, profileCity, profileStreet, profileNumber }: ProfileAddressProps) {
+export function ProfileAddress({ 
+  profileCountry, 
+  profileState, 
+  profileCity, 
+  profileStreet, 
+  profileNumber 
+}: ProfileAddressProps) {
   return (
     <section className="max-w-[230px] h-[430px] w-full rounded-lg shadow address">
       <div className="bg-gray-200 h-10 p-2">

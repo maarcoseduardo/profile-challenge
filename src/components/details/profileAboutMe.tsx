@@ -1,9 +1,19 @@
-import { AiOutlineNumber, AiOutlineUser, IoMdFemale, IoMdMale, IoMdPhonePortrait, MdOutlineEmail } from "react-icons/all";
+import { 
+  AiOutlineNumber, 
+  AiOutlineUser, 
+  IoMdFemale, 
+  IoMdMale, 
+  IoMdPhonePortrait, 
+  MdOutlineEmail 
+} from "react-icons/all";
 import { AboutMeProps } from "../../utils/types";
 
-
-
-export function ProfileAboutMe({ profileUsername, profileGender, profileAge, profileEmail, profilePhone }: AboutMeProps) {
+export function ProfileAboutMe({ 
+  profileUsername, 
+  profileGender, 
+  profileAge, 
+  profileEmail, 
+  profilePhone }: AboutMeProps) {
   return (
     <section className="max-w-xl w-full rounded-lg shadow">
       <div className="bg-gray-200 h-10 p-2">
