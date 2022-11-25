@@ -16,11 +16,15 @@ import { useParams } from "react-router-dom";
 export function ProfileDetails() {
   const { usersList } = useUsers();
   const { name } = useParams();
+  const filteredUser = usersList.filter((userProfile) => (userProfile.name.first + userProfile.name.last === name))
 
   return (
     <>
-      {usersList.map((userProfile) => (userProfile.name.first + userProfile.name.last == name ? (
-        <>
+      {filteredUser.map((userProfile) => (
+        <div
+          key={userProfile.login?.uuid}
+          className="max-w-6xl p-4 flex flex-col mx-auto xl:flex-row justify-between gap-10"
+        >
           <section className="max-w-[300px] w-full rounded-lg shadow">
             <div>
               <img className="max-w-[300px] mx-auto p-4 w-full rounded-full"
@@ -88,7 +92,7 @@ export function ProfileDetails() {
               </div>
             </div>
           </section>
-          <section className="max-w-[200px] w-full rounded-lg shadow address">
+          <section className="max-w-[230px] w-full rounded-lg shadow address">
             <div className="bg-gray-200 h-10 p-2">
               <h2 className="font-bold">Address</h2>
             </div>
@@ -105,7 +109,7 @@ export function ProfileDetails() {
                 <span className="font-bold">City:</span>
                 <span>{userProfile.location.city}</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center flex-wrap gap-3">
                 <span className="font-bold">Street:</span>
                 <span>{userProfile.location.street?.name}</span>
               </div>
@@ -115,8 +119,7 @@ export function ProfileDetails() {
               </div>
             </div>
           </section>
-        </>
-      ) : ("")
+        </div>
       ))}
     </>
   )
