@@ -29,7 +29,9 @@ de "perfil" para estes usuários. .**
 
 ## Pré-visualização
 
+![https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/homePage.png?raw=true](https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/homePage.png?raw=true)
 
+![https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/pagePerfil.png?raw=true](https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/pagePerfil.png?raw=true)
 
 ---
 
