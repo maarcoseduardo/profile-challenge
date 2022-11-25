@@ -48,3 +48,45 @@ export interface IUser {
     usersList: [],
     setUsersList: () => [],
   }
+
+
+  // PROFILE ABOUT ME 
+
+  export interface AboutMeProps {
+    profileUsername?: string;
+    profileGender: string;
+    profileAge?: number;
+    profileEmail: string;
+    profilePhone: string;
+  }
+
+
+  // PROFILE DETAILS
+
+  export interface ProfileDetailsProps {
+    profilePicture?: string;
+    profileName: string;
+    profileLastName: string;
+  }
+
+  // PROFILE ADDRESS
+
+  export interface ProfileAddressProps {
+    profileCountry: string;
+    profileState?: string;
+    profileCity: string;
+    profileStreet?: string;
+    profileNumber?: number;
+  }
+
+  // USERS TABLE LIST
+
+  export interface UsersTableListProps {
+    currentItems: IUser[]
+  }
+
+  // USERS RESPONSIVE LIST 
+
+ export interface UsersResponsiveListProps {
+    currentItems: IUser[]
+  }
