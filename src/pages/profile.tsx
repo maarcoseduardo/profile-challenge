@@ -1,10 +1,10 @@
-import { ProfileDetails } from "../components/profileDetails";
+import { Details } from "../components/details";
 
 export function Profile() {
 
   return (
     <>
-      <ProfileDetails />
+      <Details />
     </>
   )
 }

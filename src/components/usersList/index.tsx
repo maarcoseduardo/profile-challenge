@@ -56,8 +56,10 @@ export function UsersList() {
                   </Link>
                 </td>
                 <td className="p-2 text-sm text-gray-700 whitespace-nowrap">
-                  {users.name.first}
-                  {users.name.last}
+                  <div className="flex gap-1">
+                    <span>{users.name.first}</span>
+                    <span>{users.name.last}</span>
+                  </div>
                 </td>
                 <td className="p-2 text-sm text-gray-700 whitespace-nowrap">
                   {users.email}
