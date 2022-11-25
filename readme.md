@@ -29,8 +29,10 @@ de "perfil" para estes usuários. .**
 
 ## Pré-visualização
 
+** Page home **
 ![https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/homePage.png?raw=true](https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/homePage.png?raw=true)
 
+** Page profile **
 ![https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/pagePerfil.png?raw=true](https://github.com/maarcoseduardo/profile-challenge/blob/master/demo/pagePerfil.png?raw=true)
 
 ---
