@@ -78,3 +78,15 @@ export interface IUser {
     profileStreet?: string;
     profileNumber?: number;
   }
+
+  // USERS TABLE LIST
+
+  export interface UsersTableListProps {
+    currentItems: IUser[]
+  }
+
+  // USERS RESPONSIVE LIST 
+
+ export interface UsersResponsiveListProps {
+    currentItems: IUser[]
+  }
