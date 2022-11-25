@@ -13,7 +13,7 @@ export function ProfileDetails({
   profileLastName
 }: ProfileDetailsProps) {
   return (
-    <section className="max-w-[300px] w-full rounded-lg shadow">
+    <section className="max-w-[300px] w-full rounded-lg shadow" aria-label="profile-details">
       <div>
         <img className="max-w-[300px] mx-auto p-4 w-full rounded-full"
           src={profilePicture} alt={profileName} />

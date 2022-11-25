@@ -8,7 +8,7 @@ export function ProfileAddress({
   profileNumber 
 }: ProfileAddressProps) {
   return (
-    <section className="max-w-[230px] h-[430px] w-full rounded-lg shadow address">
+    <section className="max-w-[230px] h-[430px] w-full rounded-lg shadow address" aria-label="profile-address">
       <div className="bg-gray-200 h-10 p-2">
         <h2 className="font-bold">Address</h2>
       </div>

@@ -7,7 +7,9 @@ interface PaginationProps {
 export function Pagination({ setCurrentPage, pages, currentPage }: PaginationProps) {
   return (
     <div
-    className="max-w-[600px] w-full flex flex-wrap mx-auto gap-3 px-8 md:my-4 lg:my-3">
+    className="max-w-[600px] w-full flex flex-wrap mx-auto gap-3 px-8 md:my-4 lg:my-3"
+    aria-label="pagination"
+    >
       {Array.from(Array(pages), (items, index) => (
         <button
           key={index}

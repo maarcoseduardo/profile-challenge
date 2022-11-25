@@ -38,10 +38,11 @@ de "perfil" para estes usuários. .**
 ---
 
 ## 📌 Seções
-Site composto por 2 seções:
+Site composto por 3 seções:
 
 - **Home:** Página incial e lista de usuários;
 - **Details:** Página para observar a descrição e dados de um perfil.
+- **Contact:** Página com minhas redes sociais.
 
 ---
 
