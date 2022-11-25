@@ -23,7 +23,7 @@ export function ProfileDetails() {
       {filteredUser.map((userProfile) => (
         <div
           key={userProfile.login?.uuid}
-          className="max-w-6xl p-4 flex flex-col mx-auto xl:flex-row justify-between gap-10"
+          className="max-w-6xl p-4 flex flex-col items-center mx-auto xl:flex-row justify-between gap-10"
         >
           <section className="max-w-[300px] w-full rounded-lg shadow">
             <div>
@@ -87,12 +87,12 @@ export function ProfileDetails() {
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Aliquam ipsam veritatis dolore facere mollitia molestiae
                   deleniti suscipit qui corporis quaerat! Rem saepe quam, praesentium et ratione aliquid.
-                  Excepturi, cupiditate corrupti.
+                  Excepturi, cupiditate corrupti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, repudiandae consequuntur aspernatur molestiae eligendi iusto
                 </p>
               </div>
             </div>
           </section>
-          <section className="max-w-[230px] w-full rounded-lg shadow address">
+          <section className="max-w-[230px] h-[430px] w-full rounded-lg shadow address">
             <div className="bg-gray-200 h-10 p-2">
               <h2 className="font-bold">Address</h2>
             </div>
