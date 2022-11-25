@@ -1,12 +1,7 @@
 import { AiOutlineNumber, AiOutlineUser, IoMdFemale, IoMdMale, IoMdPhonePortrait, MdOutlineEmail } from "react-icons/all";
+import { AboutMeProps } from "../../utils/types";
 
-interface AboutMeProps {
-  profileUsername?: string;
-  profileGender: string;
-  profileAge?: number;
-  profileEmail: string;
-  profilePhone: string;
-}
+
 
 export function ProfileAboutMe({ profileUsername, profileGender, profileAge, profileEmail, profilePhone }: AboutMeProps) {
   return (

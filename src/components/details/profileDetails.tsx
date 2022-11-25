@@ -1,10 +1,5 @@
 import { BsInstagram, BsTwitter, MdVerified, RiFacebookFill } from "react-icons/all";
-
-interface ProfileDetailsProps {
-  profilePicture?: string;
-  profileName: string;
-  profileLastName: string;
-}
+import { ProfileDetailsProps } from "../../utils/types";
 
 export function ProfileDetails({ profilePicture, profileName, profileLastName }: ProfileDetailsProps) {
   return (

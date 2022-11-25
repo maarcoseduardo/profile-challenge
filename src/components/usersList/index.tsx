@@ -13,14 +13,14 @@ export function UsersList() {
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = usersList.slice(startIndex, endIndex);
-
+  
   return (
     <>
-      <div className="max-w-6xl w-full mx-auto mt-4 px-4 overflow-auto rounded-lg shadow hidden md:block">
+      <section className="max-w-6xl w-full mx-auto mt-4 px-4 overflow-auto rounded-lg shadow hidden md:block">
         <div className="px-2 my-4">
           <h1 className="font-bold">Users list</h1>
         </div>
-        <table className="w-full">
+        <table className="w-full hidden md:table">
           <thead className="bg-gray-50 border-b-2 border-gray-200">
             <tr>
               <th className="p-2 text-sm font-semibold tracking-wide text-left">
@@ -46,9 +46,11 @@ export function UsersList() {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
-            {currentItems.map((users) => (
-              <tr key={users.email}>
+          {currentItems.map((users) => (
+            <tbody
+            key={users.login?.uuid} 
+            className="divide-y divide-gray-100">
+              <tr>
                 <td className="p-2 text-sm text-gray-700 whitespace-nowrap">
                   <Link to={`/profile/${users.name.first}${users.name.last}`}>
                     <img className="rounded-md"
@@ -82,17 +84,18 @@ export function UsersList() {
                   </Link>
                 </td>
               </tr>
-            ))}
-          </tbody>
+            </tbody>
+          ))}
         </table>
-      </div>
+      </section>
 
-      <div>
+      <section>
         <div className="px-5 my-4 md:hidden">
           <h1 className="font-bold">Users list</h1>
         </div>
         {currentItems.map((users) => (
-          <div className="grid grid-cols-1 gap-4 px-4 md:hidden">
+          <div key={users.login?.uuid}
+            className="grid grid-cols-1 gap-4 px-4 md:hidden">
             <div className="my-2 p-4 rounded-lg shadow-lg">
               <div className="flex flex-wrap items-center space-x-2 text-sm">
                 <div>
@@ -116,12 +119,12 @@ export function UsersList() {
             </div>
           </div>
         ))}
-        <Pagination
-          setCurrentPage={setCurrentPage}
-          pages={pages}
-          currentPage={currentPage}
-        />
-      </div>
+      </section>
+      <Pagination
+        setCurrentPage={setCurrentPage}
+        pages={pages}
+        currentPage={currentPage}
+      />
     </>
   );
 }

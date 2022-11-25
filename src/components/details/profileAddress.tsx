@@ -1,10 +1,4 @@
-interface ProfileAddressProps {
-  profileCountry: string;
-  profileState?: string;
-  profileCity: string;
-  profileStreet?: string;
-  profileNumber?: number;
-}
+import { ProfileAddressProps } from "../../utils/types";
 
 export function ProfileAddress({ profileCountry, profileState, profileCity, profileStreet, profileNumber }: ProfileAddressProps) {
   return (
