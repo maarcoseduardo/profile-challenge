@@ -5,7 +5,7 @@ export function UsersResponsiveList({ currentItems }: UsersResponsiveListProps) 
   return (
     <>
       <section>
-        <div className="px-5 my-4 md:hidden">
+        <div className="px-5 my-4 md:hidden" aria-label="users-responsive-list">
           <h1 className="font-bold">Users list</h1>
         </div>
         {currentItems.map((users) => (

@@ -4,7 +4,7 @@ import { UsersTableListProps } from "../../utils/types";
 export function UsersTableList({ currentItems }: UsersTableListProps) {
   return (
     <>
-      <section className="max-w-6xl w-full mx-auto mt-4 px-4 overflow-auto rounded-lg shadow hidden md:block">
+      <section className="max-w-6xl w-full mx-auto mt-4 px-4 overflow-auto rounded-lg shadow hidden md:block" aria-label="users-table-list">
         <table className="w-full hidden md:table">
           <thead className="bg-gray-50 border-b-2 border-gray-200">
             <tr>

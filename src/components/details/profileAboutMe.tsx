@@ -13,9 +13,10 @@ export function ProfileAboutMe({
   profileGender, 
   profileAge, 
   profileEmail, 
-  profilePhone }: AboutMeProps) {
+  profilePhone 
+}: AboutMeProps) {
   return (
-    <section className="max-w-xl w-full rounded-lg shadow">
+    <section className="max-w-xl w-full rounded-lg shadow" aria-label="profile-about">
       <div className="bg-gray-200 h-10 p-2">
         <h2 className="font-bold">About me</h2>
       </div>
@@ -29,7 +30,8 @@ export function ProfileAboutMe({
             {profileGender === "male" ?
               (< IoMdMale />)
               :
-              (<IoMdFemale />)}
+              (<IoMdFemale />)
+            }
             <span>{profileGender}</span>
           </div>
           <div className="flex items-center gap-3 my-2">
