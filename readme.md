@@ -54,6 +54,7 @@ Esse projeto foi desenvolvido com a seguinte tecnologia e suas dependencias:
     - react-router-dom 
     - tailwindcss
     - typescript
+    - storybook
 - API randomuser
 ---
 
