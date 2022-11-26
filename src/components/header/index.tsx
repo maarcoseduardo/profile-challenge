@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export function Header() {
+export const Header = () => {
   return (
     <header className="bg-gray-900" aria-label="header">
       <div className="max-w-7xl w-full h-16 flex justify-between items-center mx-auto px-6">
@@ -20,4 +20,4 @@ export function Header() {
       </div>
     </header>
   );
-}
+};

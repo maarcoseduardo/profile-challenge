@@ -1,4 +1,3 @@
-import React from "react";
 import { ProfileAddress } from "./profileAddress";
 import { expect, test } from "vitest";
 import { render } from "@testing-library/react";
