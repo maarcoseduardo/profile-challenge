@@ -5,7 +5,6 @@ import { createMemoryHistory } from "@remix-run/router";
 import { Router } from "react-router-dom";
 import { ProfileDetails } from "./profileDetails";
 
-
 const profileProps = {
   profilePicture: "",
   profileName: "Marcos",
