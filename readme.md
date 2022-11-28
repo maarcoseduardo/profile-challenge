@@ -65,7 +65,7 @@ Esse projeto foi desenvolvido com a seguinte tecnologia e suas dependencias:
 #### Clone o repositório usando o seguinte comando ou baixe
 
 ```
-git clone https://github.com/maarcoseduardo/selfcare-commerce.git
+git clone https://github.com/maarcoseduardo/profile-challenge.git
 ```
 
 #### Para instalar as dependências
