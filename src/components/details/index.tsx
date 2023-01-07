@@ -1,4 +1,4 @@
-import { useUsers } from "@/context"
+import { useUsers } from "../../../src/context"
 import { useParams } from "react-router-dom";
 import { ProfileDetails } from "./profileDetails";
 import { ProfileAboutMe } from "./profileAboutMe";
